@@ -1,24 +1,104 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Nng-nM-TOA">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Create Account Page View Controller-->
+        <scene sceneID="tPE-eF-h6K">
+            <objects>
+                <viewController id="zOg-Rl-rpy" customClass="CreateAccountPageViewController" customModule="JobApplicationTask" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="18d-h2-7bC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="iCM-eU-oR5"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ovJ-by-CcD"/>
+                    <connections>
+                        <segue destination="VSH-bT-hC3" kind="presentation" identifier="showHomePage" modalPresentationStyle="fullScreen" id="RLS-r8-wQk"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="showLoginPage" modalPresentationStyle="fullScreen" id="FlU-x5-npX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8S1-Rb-2dj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="810" y="-777"/>
+        </scene>
+        <!--Login Page View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="BYZ-38-t0r" customClass="LoginPageViewController" customModule="JobApplicationTask" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="logi">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
+                    <navigationItem key="navigationItem" id="MjQ-2C-Vsu"/>
+                    <connections>
+                        <segue destination="zOg-Rl-rpy" kind="presentation" identifier="CreateAccountPage" modalPresentationStyle="fullScreen" id="ApQ-tq-z0d"/>
+                        <segue destination="VSH-bT-hC3" kind="presentation" identifier="showHomePage" modalPresentationStyle="fullScreen" id="3Eh-Ck-9pS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="42" y="-34"/>
+        </scene>
+        <!--Home Page View Controller-->
+        <scene sceneID="FPZ-Wg-Pj1">
+            <objects>
+                <viewController storyboardIdentifier="homeView" id="VSH-bT-hC3" customClass="HomePageViewController" customModule="JobApplicationTask" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qts-Ay-gLF">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Tcd-SK-299"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="FeM-xV-0KP"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="showLoginPage" modalPresentationStyle="fullScreen" id="olc-Xy-7ws"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Fj-0H-nOh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1746" y="-35"/>
+        </scene>
+        <!--Launch Page View Controller-->
+        <scene sceneID="GSd-lw-onA">
+            <objects>
+                <viewController id="Nng-nM-TOA" customClass="LaunchPageViewController" customModule="JobApplicationTask" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vsd-aX-cgq">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="STp-3K-4Df">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6pR-V9-NP2"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="STp-3K-4Df" firstAttribute="leading" secondItem="6pR-V9-NP2" secondAttribute="leading" id="AWd-vz-GJd"/>
+                            <constraint firstItem="STp-3K-4Df" firstAttribute="top" secondItem="6pR-V9-NP2" secondAttribute="top" id="XrN-q0-Gc8"/>
+                            <constraint firstItem="6pR-V9-NP2" firstAttribute="bottom" secondItem="STp-3K-4Df" secondAttribute="bottom" id="iM7-V6-Uw9"/>
+                            <constraint firstItem="6pR-V9-NP2" firstAttribute="trailing" secondItem="STp-3K-4Df" secondAttribute="trailing" id="lgZ-EF-2YF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="gifImageView" destination="STp-3K-4Df" id="SOW-do-NmC"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="showLoginPage" modalPresentationStyle="fullScreen" id="SyF-k6-jza"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BsP-hR-1li" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-868" y="-35"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="3Eh-Ck-9pS"/>
+        <segue reference="olc-Xy-7ws"/>
+    </inferredMetricsTieBreakers>
 </document>
